@@ -35,31 +35,34 @@ function modal(id) {
 
     if (id === 'tipo_1') {
         header.classList.add('img-licor');
-        buscador.innerHTML = '<input type="text" id="searchInput" placeholder="Ejemplo Aguardiente litro tapa verde" oninput="buscar()">';
+        buscador.innerHTML = ' <p>Buscador de  productos </p> <br><input type="text" id="searchInput" placeholder="Ejemplo Aguardiente litro tapa verde" oninput="buscar()">';
 
         const imagen_licor = [
-            { src: '/image/licor/Aguardiente/Aguadiente-Media-Verde.jpg', alt: 'Aguardiente tapa verde', descripcion: 'Aguardiente Media tapa verde' },
-            { src: '/image/licor/Aguardiente/Aguardiente-Litro-Verde-.jpg', alt: 'Aguardiente tapa verde', descripcion: 'Aguardiente Litro tapa verde' },
-            { src: '/image/licor/Aguardiente/Aguardiente-Garrafa-Verde.jpg', alt: 'Aguardiente tapa verde', descripcion: 'Aguardiente Garrafa tapa verde' },
-            { src: '/image/licor/Aguardiente/Aguardiente-Media-Azul.jpg', alt: 'Aguardiente tapa azul', descripcion: 'Aguardiente Media tapa azul' },
-            { src: '/image/licor/Aguardiente/Aguardiente-Litro-Azul.jpg', alt: 'Aguardiente tapa azul', descripcion: 'Aguardiente Litro tapa azul' },
-            { src: '/image/licor/Aguardiente/Aguardiente-Garrafa-Azul.jpg', alt: 'Aguardiente tapa azul', descripcion: 'Aguardiente Garrafa tapa azul' },
-            { src: '/image/licor/Aguardiente/Aguardiente-Media-Rojo.jpg', alt: 'Aguardiente tapa roja', descripcion: 'Aguardiente Media tapa Rojo' },
-            { src: '/image/licor/Aguardiente/Aguardiente-Litro-Rojo.jpg', alt: 'Aguardiente tapa roja', descripcion: 'Aguardiente Litro tapa Rojo' },
-            { src: '/image/licor/Aguardiente/Aguardiente-Garrafa-Rojo.jpg', alt: 'Aguardiente tapa roja', descripcion: 'Aguardiente Garrafa tapa Rojo' },
-            { src: '/image/licor/wisky/Whisky-Buchanans_Deluxe_375ml.jpg', alt: 'Whisky buchanans delux', descripcion: 'Whisky Media buchanans delux' },
-            { src: '/image/licor/wisky/WHISKY-BUCHANANS-MASTER-BOTELLA-1-litro.jpg', alt: 'Whisky buchanans master', descripcion: 'Whisky Litro buchanans master ' },
-            { src: '/image/licor/wisky/WHISKY-BUCHANANS-AnEJO-12-ANOS-LITRO.jpg', alt: 'Whisky buchanans anejo', descripcion: 'Whisky Litro buchanans anejo' },
+            { src: '/image/licor/Aguardiente/Aguadiente-Media-Verde.jpg', alt: 'Aguardiente tapa verde', descripcion: 'Aguardiente Media tapa verde',precio:'$25.000' },
+            { src: '/image/licor/Aguardiente/Aguardiente-Litro-Verde-.jpg', alt: 'Aguardiente tapa verde', descripcion: 'Aguardiente Litro tapa verde',precio:'$100.000' },
+            { src: '/image/licor/Aguardiente/Aguardiente-Garrafa-Verde.jpg', alt: 'Aguardiente tapa verde', descripcion: 'Aguardiente Garrafa tapa verde',precio:'$125.000' },
+            { src: '/image/licor/Aguardiente/Aguardiente-Media-Azul.jpg', alt: 'Aguardiente tapa azul', descripcion: 'Aguardiente Media tapa azul',precio:'$25.000' },
+            { src: '/image/licor/Aguardiente/Aguardiente-Litro-Azul.jpg', alt: 'Aguardiente tapa azul', descripcion: 'Aguardiente Litro tapa azul',precio:'$100.000' },
+            { src: '/image/licor/Aguardiente/Aguardiente-Garrafa-Azul.jpg', alt: 'Aguardiente tapa azul', descripcion: 'Aguardiente Garrafa tapa azul',precio:'$25.000' },
+            { src: '/image/licor/Aguardiente/Aguardiente-Media-Rojo.jpg', alt: 'Aguardiente tapa roja', descripcion: 'Aguardiente Media tapa Rojo',precio:'$25.000' },
+            { src: '/image/licor/Aguardiente/Aguardiente-Litro-Rojo.jpg', alt: 'Aguardiente tapa roja', descripcion: 'Aguardiente Litro tapa Rojo',precio:'$100.000' },
+            { src: '/image/licor/Aguardiente/Aguardiente-Garrafa-Rojo.jpg', alt: 'Aguardiente tapa roja', descripcion: 'Aguardiente Garrafa tapa Rojo',precio:'$125.000' },
+            { src: '/image/licor/wisky/Whisky-Buchanans_Deluxe_375ml.jpg', alt: 'Whisky buchanans delux', descripcion: 'Whisky Media buchanans delux',precio:'$25.000' },
+            { src: '/image/licor/wisky/WHISKY-BUCHANANS-MASTER-BOTELLA-1-litro.jpg', alt: 'Whisky buchanans master', descripcion: 'Whisky Litro buchanans master ',precio:'$125.000' },
+            { src: '/image/licor/wisky/WHISKY-BUCHANANS-AnEJO-12-ANOS-LITRO.jpg', alt: 'Whisky buchanans anejo', descripcion: 'Whisky Litro buchanans anejo',precio:'$225.000' },
        
         ];
 
-        function generarImagenHTML(src, alt, descripcion) {
+        function generarImagenHTML(src, alt, descripcion,precio) {
             return `                 
                     <div class="section-main_cards">
                         <figure class="section--main_cards_image section">
                             <img src="${src}" alt="${alt}">                    
                         </figure>
-                        <span class="section--main_cards_title title ">${descripcion}</span>
+                        <span class="section--main_cards_title">${descripcion}</span>
+                        <br>
+                        <span class="title">${precio}</span>
+
                     </div>
                 `;
         }
@@ -68,7 +71,7 @@ function modal(id) {
             let imagenesHTML = '';
             for (const imagen of imagen_licor) {
 
-                imagenesHTML += generarImagenHTML(imagen.src, imagen.alt, imagen.descripcion);
+                imagenesHTML += generarImagenHTML(imagen.src, imagen.alt, imagen.descripcion,imagen.precio);
 
             }
             contenedor.innerHTML = imagenesHTML;

@@ -25,6 +25,10 @@ body {
 }
 
 
+.title{
+    color: white;
+text-align: center;
+}
 
 
 header {
@@ -373,7 +377,7 @@ section[id] {
 }
 
 #buscador {
-    text-align: right;
+    text-align: center;
     margin-right: 2%;
     color: black;
 
@@ -381,10 +385,15 @@ section[id] {
 
 #buscador input {
     color: black;
-    width: 18%;
+   
 }
 
-
+#searchInput {
+  width: 50%;
+}
+#buscador p{
+    color: white;
+}
 @media (min-width:375px) and (max-width:449px) {
 
 
@@ -400,6 +409,14 @@ section[id] {
         height: 350px;
 
         transition: 0.5s;
+    }
+
+    .section--main_cards_title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        font-family: var(--font-montserrat);
+        align-self: center;
+        color: rgb(240, 239, 238);
     }
 
 }

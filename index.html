@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="image/AFRY PRESTIGE_page-0001.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AFRY PRESTIGE</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="index.html">
+                    <img src="image/iconAfry.png" alt="logo" class="logo">
+
+                </a>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
+                <li><a class="active" href="index.html" id="tipo_0" onclick="modal(this.id)">Inicio</a></li>
+                <li><a class="remove" href="#quienes_somos">Quienes somos</a></li>
+                <li><a href="#products">Productos</a></li>
+            </ul>
+
+        </nav>
+        <video autoplay muted loop id="video-background">
+            <source src="/video/pexels-stefano-patacchiola-5470150 (1080p).mp4" type="video/mp4">
+            Tu navegador no admite la reproducción de video.
+        </video>
+        <div class="content">
+            <!-- Tu contenido del encabezado aquí -->
+        </div>
+        <div class="banner-text">
+            <h2>LUXURY AND CLOTHES</h2>
+            <h1>AFRY GB <span>PRESTIGE</span></h1>
+
+
+            <div class="buttons_header">
+                <a href="#categorias" class="button1">EXPLORE</a>
+                <a href="" class="button2">SHOP NOW</a>
+            </div>
+        </div>
+
+    </header>
+
+    <article id="quienes_somos">
+        <h1 class="title_text">QUIENES SOMOS</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque odit voluptate molestiae error labore cum
+            architecto, voluptatibus, amet doloribus tempora laborum, atque possimus esse accusantium aut ipsam commodi
+            voluptatem temporibus?
+            Illo veritatis quisquam possimus autem saepe, ipsam nam unde ab est voluptate. Aperiam dicta fugit possimus
+            laudantium, cupiditate expedita nesciunt! Veritatis quisquam iusto nisi, quas ipsa beatae nostrum eius
+            obcaecati.
+            Libero, ipsum! Odit sint, accusantium fuga dicta consectetur quaerat impedit officiis eum nesciunt mollitia
+            voluptatum, quae similique in nulla vitae minima quisquam non delectus veritatis, necessitatibus deserunt
+            commodi. Voluptate, deleniti?</p>
+    </article>
+
+    <h1 id="categorias" class="title_text">PRODUCTOS</h1>
+
+    <div id="buscador" class="search-container"> </div>
+
+    <section class="section-main container mt-3" id="products">
+
+        <div class="section-main_cards section">
+            <figure class="section--main_cards_image">
+                <a href="#video-background" id="tipo_1" onclick="modal(this.id)">
+                    <img src="/image/licor/wisky/buchanans.jpg" alt="">
+                    
+                </a>
+            </figure>
+            <span class="section--main_cards_title title ">Licor</span>
+        </div>
+
+        <div class="section-main_cards section">
+            <figure class="section--main_cards_image">
+                <a href="#video-background" id="tipo_2" onclick="modal(this.id)">
+                    <img src="/image/vino/vino.jpg" alt="">
+                </a>
+            </figure>
+            <span class="section--main_cards_title title">Vinos</span>
+        </div>
+
+        <div class="section-main_cards section">
+            <figure class="section--main_cards_image">
+                <a href="#video-background" id="tipo_3" onclick="modal(this.id)">
+                    <img src="/image/cerveza/cerveza.jpg" alt="">
+                </a>
+            </figure>
+            <span class="section--main_cards_title title">Cervezas</span>
+        </div>
+
+        <div class="section-main_cards section">
+            <figure class="section--main_cards_image">
+                <a href="#video-background" id="tipo_4" onclick="modal(this.id)">
+                    <img src="/image/bebdidas_sin_alcohol/cocacola.jpg" alt="">
+                </a>
+            </figure>
+            <span class="section--main_cards_title title">Bebidas sin alcohol</span>
+        </div>
+
+        <div class="section-main_cards section">
+            <figure class="section--main_cards_image">
+                <a href="#video-background" id="tipo_5" onclick="modal(this.id)">
+                    <img src="/image/vapes/VAPES.png" alt="">
+                </a>
+            </figure>
+            <span class="section--main_cards_title title">Vaporizadores</span>
+        </div>
+
+        <div class="section-main_cards section">
+            <figure class="section--main_cards_image">
+                <a href="#video-background" id="tipo_6" onclick="modal(this.id)">
+                    <img src="/image/confiteria/confiteria.jpg" alt="">
+                </a>
+            </figure>
+            <span class="section--main_cards_title title">Confiteria</span>
+        </div>
+
+    </section>
+
+    <hr>
+
+    <footer>
+        <figure class="icon_footer">
+            <img src="image/iconAfry.png" alt="">
+        </figure>
+        <div class="info_footer">
+            <span>
+                <i class="fa-regular fa-envelope"></i>
+                afryprestige@gmail.com
+            </span>
+            <span class="footer_paragraph">
+                "El estilo es una forma de decir quién eres sin tener que hablar"
+            </span>
+            <span>
+                <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.link/vnpxqw">3007265802</a>
+
+            </span>
+        </div>
+    </footer>
+
+</body>
+
+<script src="/js/js.js"></script>
+
+</html>

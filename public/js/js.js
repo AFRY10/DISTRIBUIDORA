@@ -60,8 +60,8 @@ function modal(id) {
                             <img src="${src}" alt="${alt}">                    
                         </figure>
                         <span class="section--main_cards_title">${descripcion}</span>
-                        <br>
-                        <span class="title">${precio}</span>
+                  <br>
+                        <span class="precio">${precio}</span>
 
                     </div>
                 `;
